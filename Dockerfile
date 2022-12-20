@@ -1,6 +1,6 @@
 FROM openwrtorg/rootfs:openwrt-22.03
 COPY openclash/luci-app-openclash_0.45.78-beta_all.ipk /app/openclash.ipk
-RUN sed -i 's_downloads.openwrt.org_mirrors.tuna.tsinghua.edu.cn/openwrt_' /etc/opkg/distfeeds.conf
+# RUN sed -i 's_downloads.openwrt.org_mirrors.tuna.tsinghua.edu.cn/openwrt_' /etc/opkg/distfeeds.conf
 RUN mkdir /var/lock
 RUN opkg update
 RUN opkg remove dnsmasq
